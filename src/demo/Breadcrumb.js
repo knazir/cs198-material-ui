@@ -6,7 +6,7 @@ import Link from '@material-ui/core/Link';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    margin: '1em 1.5em'
+    margin: theme.spacing(1, 1.5),
   },
 }));
 

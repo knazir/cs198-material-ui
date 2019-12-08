@@ -9,12 +9,14 @@ import TableRow from '@material-ui/core/TableRow';
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 
+import SearchInput from './SearchInput';
+
 const useStyles = makeStyles(theme => ({
   root: {
     width: '100%',
   },
   header: {
-    marginBottom: '0.5em',
+    marginBottom: theme.spacing(0.5),
   },
   paper: {
     width: '100%',
@@ -22,6 +24,13 @@ const useStyles = makeStyles(theme => ({
   },
   table: {
     minWidth: 650,
+  },
+  tableBanner: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'flex-end',
+    marginBottom: theme.spacing(0.5),
+    width: '100%',
   },
   tableColumnHeader: {
     backgroundColor: theme.palette.secondary.main,
@@ -58,6 +67,10 @@ export default function Courses() {
   return (
     <Container maxWidth="lg">
       <Typography className={classes.header} variant="h5" component="h2">NavTable</Typography>
+      <div className={classes.tableBanner}>
+        <Typography className={classes.tableTitle} variant="h5" component="h3">Courses for Autumn 2019</Typography>
+        <SearchInput/>
+      </div>
       <Paper className={classes.paper}>
         <Table className={classes.table} size="small" aria-label="a dense table">
           <TableHead>

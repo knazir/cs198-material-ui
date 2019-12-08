@@ -15,12 +15,12 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'space-between',
     alignItems: 'center',
     width: '100%',
-    marginBottom: '1em',
+    marginBottom: theme.spacing(1),
   },
   controls: {
     '> *': {
       fontWeight: theme.typography.fontWeightMedium,
-      marginLeft: '1em',
+      marginLeft: theme.spacing(1),
     }
   },
   formControl: {
@@ -31,7 +31,7 @@ const useStyles = makeStyles(theme => ({
     marginTop: theme.spacing(2),
   },
   viewControl: {
-    marginRight: '1em',
+    marginRight: theme.spacing(1),
   },
 }));
 
@@ -49,15 +49,11 @@ export default function SubmissionControlBar() {
   });
 
   const handleChange = name => event => {
-    setState({
-      ...state,
-      [name]: event.target.value,
-    });
+    setState({ [name]: event.target.value });
   };
   const handleViewChange = (event, newView) => {
-    setState({
-      view: newView
-    });
+    if (!newView) return;
+    setState({ view: newView });
   };
 
   return (

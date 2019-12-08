@@ -14,28 +14,27 @@ import SubmissionControlBar from './SubmissionControlBar';
 const useStyles = makeStyles(theme => ({
   root: {
     width: '100%',
-    marginTop: '4em',
+    marginTop: theme.spacing(4)
   },
   categories: {
-    padding: '0.5em',
+    padding: theme.spacing(0.5),
   },
   chip: {
     margin: theme.spacing(0.5),
   },
   disabledPanel: {
-    marginBottom: '2em',
+    marginBottom: theme.spacing(2),
   },
   enabledPanel: {
-    marginBottom: '0.5em',
+    marginBottom: theme.spacing(0.5),
   },
   grade: {
     flexDirection: 'column',
   },
   header: {
-    marginBottom: '0.5em',
+    marginBottom: theme.spacing(0.5),
   },
   heading: {
-    fontSize: '1.25em',
     fontWeight: theme.typography.fontWeightMedium,
   },
   label: {
