@@ -9,6 +9,8 @@ import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Paper from '@material-ui/core/Paper';
 
+import SubmissionControlBar from './SubmissionControlBar';
+
 const useStyles = makeStyles(theme => ({
   root: {
     width: '100%',
@@ -22,6 +24,9 @@ const useStyles = makeStyles(theme => ({
   },
   disabledPanel: {
     marginBottom: '2em',
+  },
+  enabledPanel: {
+    marginBottom: '0.5em',
   },
   grade: {
     flexDirection: 'column',
@@ -84,7 +89,7 @@ export default function CodeReview() {
           </ExpansionPanelDetails>
         </ExpansionPanel>
       </Paper>
-
+      <SubmissionControlBar/>
     </Container>
   );
 }
