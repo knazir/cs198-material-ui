@@ -14,7 +14,7 @@ import SubmissionControlBar from './SubmissionControlBar';
 const useStyles = makeStyles(theme => ({
   root: {
     width: '100%',
-    marginTop: '3em',
+    marginTop: '4em',
   },
   categories: {
     padding: '0.5em',
@@ -30,6 +30,9 @@ const useStyles = makeStyles(theme => ({
   },
   grade: {
     flexDirection: 'column',
+  },
+  header: {
+    marginBottom: '0.5em',
   },
   heading: {
     fontSize: '1.25em',
@@ -55,6 +58,7 @@ export default function CodeReview() {
   ];
   return (
     <Container className={classes.root} maxWidth="lg">
+      <Typography className={classes.header} variant="h5" component="h2">Code Review</Typography>
       <Paper className={`${classes.paper} ${classes.disabledPanel}`}>
         <ExpansionPanel disabled>
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />} aria-controls="overall-comment-content"

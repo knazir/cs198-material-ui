@@ -6,6 +6,8 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import NativeSelect from '@material-ui/core/NativeSelect';
 import Paper from '@material-ui/core/Paper';
 import Switch from '@material-ui/core/Switch';
+import ToggleButton from '@material-ui/lab/ToggleButton';
+import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -16,8 +18,9 @@ const useStyles = makeStyles(theme => ({
     marginBottom: '1em',
   },
   controls: {
-    '> label': {
-      marginLeft: '0.5em',
+    '> *': {
+      fontWeight: theme.typography.fontWeightMedium,
+      marginLeft: '1em',
     }
   },
   formControl: {
@@ -27,8 +30,8 @@ const useStyles = makeStyles(theme => ({
   selectEmpty: {
     marginTop: theme.spacing(2),
   },
-  sep: {
-    marginRight: '2em',
+  viewControl: {
+    marginRight: '1em',
   },
 }));
 
@@ -42,12 +45,18 @@ export default function SubmissionControlBar() {
   const [state, setState] = React.useState({
     file: '',
     version: '',
+    view: 'files',
   });
 
   const handleChange = name => event => {
     setState({
       ...state,
       [name]: event.target.value,
+    });
+  };
+  const handleViewChange = (event, newView) => {
+    setState({
+      view: newView
     });
   };
 
@@ -74,6 +83,13 @@ export default function SubmissionControlBar() {
       <div className={classes.controls}>
         <FormControlLabel value="end" control={<Switch color="primary"/>} label="Read-Only" labelPlacement="end"/>
         <FormControlLabel value="end" control={<Switch color="primary"/>} label="Released" labelPlacement="end"/>
+      </div>
+      <div className={classes.viewControl}>
+        <ToggleButtonGroup size="medium" value={state.view} exclusive onChange={handleViewChange}>
+          <ToggleButton value="files">Files</ToggleButton>
+          <ToggleButton value="grade">Grade</ToggleButton>
+          <ToggleButton value="split">Split</ToggleButton>
+        </ToggleButtonGroup>
       </div>
     </Paper>
   );

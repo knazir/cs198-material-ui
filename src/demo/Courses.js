@@ -13,6 +13,9 @@ const useStyles = makeStyles(theme => ({
   root: {
     width: '100%',
   },
+  header: {
+    marginBottom: '0.5em',
+  },
   paper: {
     width: '100%',
     overflowX: 'auto',
@@ -54,9 +57,7 @@ export default function Courses() {
   const classes = useStyles();
   return (
     <Container maxWidth="lg">
-      <Typography variant="h5" component="h2">
-        Courses for Autumn 2019
-      </Typography>
+      <Typography className={classes.header} variant="h5" component="h2">NavTable</Typography>
       <Paper className={classes.paper}>
         <Table className={classes.table} size="small" aria-label="a dense table">
           <TableHead>
