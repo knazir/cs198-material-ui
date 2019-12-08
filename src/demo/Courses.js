@@ -9,37 +9,34 @@ import TableRow from '@material-ui/core/TableRow';
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 
-const useStyles = makeStyles(theme => {
-  console.log(theme);
-  return ({
-    root: {
-      width: '100%',
-    },
-    paper: {
-      width: '100%',
-      overflowX: 'auto',
-    },
-    table: {
-      minWidth: 650,
-    },
-    tableColumnHeader: {
-      backgroundColor: theme.palette.secondary.main,
-      color: theme.palette.secondary.contrastText,
-      fontSize: '1.25em',
-      fontWeight: 'bold',
-    },
-    tableRow: {
-      cursor: 'pointer',
+const useStyles = makeStyles(theme => ({
+  root: {
+    width: '100%',
+  },
+  paper: {
+    width: '100%',
+    overflowX: 'auto',
+  },
+  table: {
+    minWidth: 650,
+  },
+  tableColumnHeader: {
+    backgroundColor: theme.palette.secondary.main,
+    color: theme.palette.secondary.contrastText,
+    fontSize: '1.25em',
+    fontWeight: theme.typography.fontWeightBold,
+  },
+  tableRow: {
+    cursor: 'pointer',
 
-      '&:nth-child(even)': {
-        backgroundColor: '#e0e0e0',
-      },
-      '&:hover': {
-        backgroundColor: '#e0eeee',
-      },
+    '&:nth-child(even)': {
+      backgroundColor: '#e0e0e0',
     },
-  });
-});
+    '&:hover': {
+      backgroundColor: '#e0eeee',
+    },
+  }
+}));
 
 function createData(course, role, instructors) {
   return { course, role, instructors };

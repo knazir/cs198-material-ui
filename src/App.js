@@ -1,19 +1,14 @@
 import React from 'react';
-import { makeStyles } from "@material-ui/core";
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 
 import Breadcrumb from './demo/Breadcrumb';
+import CodeReview from './demo/CodeReview';
 import Courses from './demo/Courses'
 import Header from './demo/Header';
 
-const useStyles = makeStyles(theme => ({
-
-}));
-
 export default function App() {
-  const classes = useStyles();
   return (
     <React.Fragment>
       <Header/>
@@ -29,6 +24,7 @@ export default function App() {
         </Box>
       </Container>
       <Courses/>
+      <CodeReview/>
     </React.Fragment>
   );
 }
