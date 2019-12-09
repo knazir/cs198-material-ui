@@ -7,6 +7,7 @@ import Breadcrumb from './demo/Breadcrumb';
 import CodeReview from './demo/CodeReview';
 import Courses from './demo/Courses'
 import Header from './demo/Header';
+import ModalTest from './demo/ModalTest';
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
         </Box>
       </Container>
       <Courses/>
+      <ModalTest/>
       <CodeReview/>
     </React.Fragment>
   );
