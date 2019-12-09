@@ -19,7 +19,8 @@
     "gh-pages": "^2.1.1",
     "react": "latest",
     "react-dom": "latest",
-    "react-scripts": "latest"
+    "react-scripts": "latest",
+    "react-syntax-highlighter": "^11.0.2"
   },
   "browserslist": {
     "production": [

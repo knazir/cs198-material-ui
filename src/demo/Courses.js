@@ -40,13 +40,15 @@ const useStyles = makeStyles(theme => ({
   },
   tableRow: {
     cursor: 'pointer',
-
     '&:nth-child(even)': {
       backgroundColor: '#e0e0e0',
     },
     '&:hover': {
       backgroundColor: '#e0eeee',
     },
+  },
+  tableTitle: {
+
   }
 }));
 
