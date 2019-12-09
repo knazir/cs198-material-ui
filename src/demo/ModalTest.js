@@ -120,7 +120,7 @@ export default function ModalTest() {
   // modal
   const handleModalOpen = () => setState({ modalOpen: true });
   const handleModalClose = (success) => {
-    setState({ modalOpen: false, snackbarOpen: success != null, snackbarSuccess: success });
+    setState({ ...state, modalOpen: false, snackbarOpen: success != null, snackbarSuccess: success });
   };
 
   // snackbar
