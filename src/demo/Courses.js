@@ -39,6 +39,7 @@ const useStyles = makeStyles(theme => ({
     fontWeight: theme.typography.fontWeightBold,
   },
   tableRow: {
+    textDecoration: 'none',
     cursor: 'pointer',
     '&:nth-child(even)': {
       backgroundColor: '#e0e0e0',
@@ -66,6 +67,7 @@ const rows = [
 
 export default function Courses() {
   const classes = useStyles();
+  const props = {href: "https://www.google.com"};
   return (
     <Container maxWidth="lg">
       <Typography className={classes.header} variant="h5" component="h2">NavTable</Typography>
@@ -74,22 +76,22 @@ export default function Courses() {
         <SearchInput/>
       </div>
       <Paper className={classes.paper}>
-        <Table className={classes.table} size="small" aria-label="a dense table">
-          <TableHead>
-            <TableRow>
-              <TableCell className={classes.tableColumnHeader}>Course</TableCell>
-              <TableCell className={classes.tableColumnHeader}>Role</TableCell>
-              <TableCell className={classes.tableColumnHeader}>Instructor(s)</TableCell>
+        <Table className={classes.table} component="div" size="small" aria-label="a dense table">
+          <TableHead component="div">
+            <TableRow component="div">
+              <TableCell component="div" className={classes.tableColumnHeader}>Course</TableCell>
+              <TableCell component="div" className={classes.tableColumnHeader}>Role</TableCell>
+              <TableCell component="div" className={classes.tableColumnHeader}>Instructor(s)</TableCell>
             </TableRow>
           </TableHead>
-          <TableBody>
+          <TableBody component="div">
             {rows.map(row => (
-              <TableRow key={row.course} className={classes.tableRow}>
-                <TableCell component="th" scope="row">
+              <TableRow {...props} component="a"  key={row.course} className={classes.tableRow}>
+                <TableCell component="div" scope="row">
                   {row.course}
                 </TableCell>
-                <TableCell align="left">{row.role}</TableCell>
-                <TableCell align="left">{row.instructors}</TableCell>
+                <TableCell component="div" align="left">{row.role}</TableCell>
+                <TableCell component="div" align="left">{row.instructors}</TableCell>
               </TableRow>
             ))}
           </TableBody>

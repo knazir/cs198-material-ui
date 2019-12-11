@@ -8,6 +8,7 @@ import Paper from '@material-ui/core/Paper';
 import Switch from '@material-ui/core/Switch';
 import ToggleButton from '@material-ui/lab/ToggleButton';
 import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
+import Tooltip from '@material-ui/core/Tooltip';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -61,19 +62,23 @@ export default function SubmissionControlBar() {
       <div>
         <FormControl className={classes.formControl}>
           <InputLabel shrink htmlFor="version-native-simple">Version</InputLabel>
-          <NativeSelect value={state.version} onChange={handleChange('version')}
-                  inputProps={{ name: 'version', id: 'version-native-simple' }}>
-            <option value="" disabled/>
-            {versions.map(version => <option key={version} value={version}>{version}</option>)}
-          </NativeSelect>
+          <Tooltip title="Submission Version">
+            <NativeSelect value={state.version} onChange={handleChange('version')}
+                    inputProps={{ name: 'version', id: 'version-native-simple' }}>
+              <option value="" disabled/>
+              {versions.map(version => <option key={version} value={version}>{version}</option>)}
+            </NativeSelect>
+          </Tooltip>
         </FormControl>
         <FormControl className={classes.formControl}>
           <InputLabel shrink htmlFor="file-native-simple">File</InputLabel>
-          <NativeSelect value={state.file} onChange={handleChange('file')}
-                  inputProps={{ name: 'file', id: 'file-native-simple' }}>
-            <option value="" disabled/>
-            {files.map(file => <option key={file} value={file}>{file}</option>)}
-          </NativeSelect>
+          <Tooltip title="Submission File">
+            <NativeSelect value={state.file} onChange={handleChange('file')}
+                    inputProps={{ name: 'file', id: 'file-native-simple' }}>
+              <option value="" disabled/>
+              {files.map(file => <option key={file} value={file}>{file}</option>)}
+            </NativeSelect>
+          </Tooltip>
         </FormControl>
       </div>
       <div className={classes.controls}>
