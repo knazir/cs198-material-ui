@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/cs198-material-ui/static/js/main.79d9aa8e.chunk.js",
-    "main.js.map": "/cs198-material-ui/static/js/main.79d9aa8e.chunk.js.map",
+    "main.js": "/cs198-material-ui/static/js/main.35aaedf7.chunk.js",
+    "main.js.map": "/cs198-material-ui/static/js/main.35aaedf7.chunk.js.map",
     "runtime-main.js": "/cs198-material-ui/static/js/runtime-main.0b11385c.js",
     "runtime-main.js.map": "/cs198-material-ui/static/js/runtime-main.0b11385c.js.map",
-    "static/js/2.f9b541d5.chunk.js": "/cs198-material-ui/static/js/2.f9b541d5.chunk.js",
-    "static/js/2.f9b541d5.chunk.js.map": "/cs198-material-ui/static/js/2.f9b541d5.chunk.js.map",
+    "static/js/2.3e369372.chunk.js": "/cs198-material-ui/static/js/2.3e369372.chunk.js",
+    "static/js/2.3e369372.chunk.js.map": "/cs198-material-ui/static/js/2.3e369372.chunk.js.map",
     "index.html": "/cs198-material-ui/index.html",
-    "precache-manifest.5b5946518c2663c86dd9bde66d50f656.js": "/cs198-material-ui/precache-manifest.5b5946518c2663c86dd9bde66d50f656.js",
+    "precache-manifest.d4e3f4fe799ab2442a333b61c42f5ea9.js": "/cs198-material-ui/precache-manifest.d4e3f4fe799ab2442a333b61c42f5ea9.js",
     "service-worker.js": "/cs198-material-ui/service-worker.js",
-    "static/js/2.f9b541d5.chunk.js.LICENSE": "/cs198-material-ui/static/js/2.f9b541d5.chunk.js.LICENSE"
+    "static/js/2.3e369372.chunk.js.LICENSE": "/cs198-material-ui/static/js/2.3e369372.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.0b11385c.js",
-    "static/js/2.f9b541d5.chunk.js",
-    "static/js/main.79d9aa8e.chunk.js"
+    "static/js/2.3e369372.chunk.js",
+    "static/js/main.35aaedf7.chunk.js"
   ]
 }
